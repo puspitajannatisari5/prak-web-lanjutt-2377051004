@@ -1,0 +1,123 @@
+:root {
+    --bg-light: linear-gradient(135deg, #74ebd5, #ACB6E5);
+    --bg-dark: linear-gradient(135deg, #1e1e2f, #3c3c5f);
+    --form-bg-light: #ffffff;
+    --form-bg-dark: #2a2a40;
+    --text-light: #333;
+    --text-dark: #f1f1f1;
+    --accent: #3b82f6;
+}
+
+/* Reset & Centering */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html, body {
+    height: 100%;
+    font-family: 'Segoe UI', sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: var(--bg-light);
+    transition: background 0.5s ease;
+}
+
+body.dark {
+    background: var(--bg-dark);
+}
+
+.container {
+    width: 100%;
+    max-width: 420px;
+    background: var(--form-bg-light);
+    padding: 35px;
+    border-radius: 16px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+    transition: background 0.3s ease, color 0.3s ease;
+}
+
+body.dark .container {
+    background: var(--form-bg-dark);
+}
+
+h2 {
+    text-align: center;
+    margin-bottom: 25px;
+    color: var(--text-light);
+}
+
+body.dark h2 {
+    color: var(--text-dark);
+}
+
+label {
+    font-weight: 600;
+    color: var(--text-light);
+}
+
+body.dark label {
+    color: var(--text-dark);
+}
+
+.input-group {
+    position: relative;
+    margin-top: 15px;
+}
+
+.input-group i {
+    position: absolute;
+    top: 50%;
+    left: 10px;
+    transform: translateY(-50%);
+    color: #999;
+}
+
+.input-group input {
+    width: 100%;
+    padding: 10px 10px 10px 35px;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    font-size: 15px;
+    transition: all 0.3s ease;
+    background: transparent;
+    color: inherit;
+}
+
+.input-group input:focus {
+    border-color: var(--accent);
+    box-shadow: 0 0 5px rgba(59, 130, 246, 0.4);
+    outline: none;
+}
+
+button {
+    width: 100%;
+    padding: 12px;
+    margin-top: 20px;
+    background: var(--accent);
+    color: white;
+    font-weight: bold;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+
+button:hover {
+    background: #2563eb;
+}
+
+.toggle-theme {
+    margin-top: 20px;
+    text-align: center;
+    font-size: 14px;
+    color: #555;
+    cursor: pointer;
+    text-decoration: underline;
+}
+
+body.dark .toggle-theme {
+    color: #ccc;
+}
